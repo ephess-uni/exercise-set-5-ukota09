@@ -2,10 +2,12 @@
 
 
 def line_count(infile):
-    pass
+    with open(infile, 'r') as f:
+        line = f.readlines()
+    print(len(line))
 
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     # get the utility function for path discovery
     try:
         from src.util import get_repository_root
