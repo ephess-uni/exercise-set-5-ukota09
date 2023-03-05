@@ -1,6 +1,5 @@
 """ ex_5_2.py
 This module contains an entry point that
-
 - loads data from a file `ex_5_2-data.csv` into a numpy array
 - shifts and scales the data such that the resulting mean
         is 0 and the standard deviation is 1.
@@ -10,13 +9,11 @@ import numpy as np
 
 try:
     from src.util import get_repository_root
-
-    
 except ImportError:
     from util import get_repository_root
 
 
-if _name_ == "_main_":
+if __name__ == "__main__":
 
     # Use these predefined input / output files
     root_dir = get_repository_root()
@@ -28,5 +25,6 @@ if _name_ == "_main_":
     data -= np.mean(data)
     data /= np.std(data)
     processed = data
+
     # Save the output to OUTFILE using numpy routines.
     np.savetxt(OUTFILE, processed, delimiter=',')
