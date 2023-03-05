@@ -1,11 +1,13 @@
+"""ex_5_0.py"""
+
+
 def line_count(infile):
     with open(infile, 'r') as f:
         line = f.readlines()
     print(len(line))
 
 
-
-if _name_ == "_main_":
+if __name__ == "__main__":
     # get the utility function for path discovery
     try:
         from src.util import get_repository_root
